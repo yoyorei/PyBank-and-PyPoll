@@ -24,25 +24,25 @@ total = 0
 
 for num in pl:
 
-    total = total +int(num)
+    total = total +float(num)
 
-average = (int(pl[len(pl) - 1]) - int(pl[0]))/(len(date) - 1)
+average = (float(pl[len(pl) - 1]) - float(pl[0]))/(len(date) - 1)
 
-max = int(pl[1]) - int(pl[0])
+max = float(pl[1]) - float(pl[0])
 
-min = int(pl[1]) - int(pl[0])
+min = float(pl[1]) - float(pl[0])
 
 for i in range(len(pl) - 1):
 
-    if int(pl[i + 1]) - int(pl[i]) > max:
+    if (float(pl[i + 1]) - float(pl[i])) > max:
 
-        max = int(pl[i + 1]) - int(pl[i])
+        max = float(pl[i + 1]) - float(pl[i])
         
         maxdate = date[i + 1]
     
-    elif int(pl[i + 1]) - int(pl[i]) < min:
+    elif (float(pl[i + 1]) - float(pl[i])) < min:
 
-        min = int(pl[i + 1]) - int(pl[i])
+        min = float(pl[i + 1]) - float(pl[i])
 
         mindate = date[i + 1]
 
@@ -52,15 +52,15 @@ print("Financial Analysis")
 
 print("--------------------------------------------------")
 
-print("Total Months: "+str(len(date)))
+print(f"Total Months: {len(date)}")
 
-print("Total: " +"$" + str(total))
+print(f"Total: ${total:.0f}")
 
-print("Average Change: " + "$" + str(round(average,2)))
+print(f"Average Change: ${average:.2f}")
 
-print("Greatest Increase in Profits: " + str(maxdate) + " ($" + str(max) + ")")
+print(f"Greatest Increase in Profits: {maxdate} (${max:.0f})")
 
-print("Greatest Decrease in Profits: " + str(mindate) + " ($" + str(min) + ")")
+print(f"Greatest Decrease in Profits: {mindate} (${min:.0f})")
 
 print("")
 
@@ -73,12 +73,12 @@ with open(output_path, "w", newline="") as txt:
 
     txt.write("--------------------------------------------------\n")
 
-    txt.write("Total Months: "+str(len(date)) + "\n")
+    txt.write(f"Total Months: {len(date)}\n")
 
-    txt.write("Total: " +"$" + str(total) + "\n")
+    txt.write(f"Total: ${total:.0f}\n")
 
-    txt.write("Average Change: " + "$" + str(round(average,2)) + "\n")
+    txt.write(f"Average Change: ${average:.2f}\n")
 
-    txt.write("Greatest Increase in Profits: " + str(maxdate) + " ($" + str(max) + ")\n")
+    txt.write(f"Greatest Increase in Profits: {maxdate} (${max:.0f})\n")
 
-    txt.write("Greatest Decrease in Profits: " + str(mindate) + " ($" + str(min) + ")")
+    txt.write(f"Greatest Decrease in Profits: {mindate} (${min:.0f})")
