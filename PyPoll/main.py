@@ -20,9 +20,9 @@ totalvotes = len(votes)
 
 candidatelist = list(set(votes))
 
-results = [[name,votes.count(name)] for name in candidatelist]
+results = [(name,votes.count(name)) for name in candidatelist]
 
-sortedresult = sorted(results,key=lambda name: name[1],reverse=True)
+sortedresult = sorted(results,key=lambda x: x[1],reverse=True)
 
 
 print("")
