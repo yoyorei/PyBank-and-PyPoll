@@ -54,7 +54,7 @@ print("--------------------------------------------------")
 
 print("Total Months: "+str(len(date)))
 
-print("Total: " +"$" + str(total))
+print(f"Total: " +"$" + {total})
 
 print("Average Change: " + "$" + str(round(average,2)))
 
