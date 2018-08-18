@@ -58,9 +58,9 @@ print("Total: " +"$" + str(total))
 
 print("Average Change: " + "$" + str(round(average,2)))
 
-print("Greatest Increase in Profits: " + str(maxdate) + " (" + str(max) + ")")
+print("Greatest Increase in Profits: " + str(maxdate) + " ($" + str(max) + ")")
 
-print("Greatest Decrease in Profits: " + str(mindate) + " (" + str(min) + ")")
+print("Greatest Decrease in Profits: " + str(mindate) + " ($" + str(min) + ")")
 
 print("")
 
@@ -79,6 +79,6 @@ with open(output_path, "w", newline="") as txt:
 
     txt.write("Average Change: " + "$" + str(round(average,2)) + "\n")
 
-    txt.write("Greatest Increase in Profits: " + str(maxdate) + " (" + str(max) + ")\n")
+    txt.write("Greatest Increase in Profits: " + str(maxdate) + " ($" + str(max) + ")\n")
 
-    txt.write("Greatest Decrease in Profits: " + str(mindate) + " (" + str(min) + ")")
+    txt.write("Greatest Decrease in Profits: " + str(mindate) + " ($" + str(min) + ")")
