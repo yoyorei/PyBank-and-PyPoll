@@ -6,7 +6,7 @@ date = []
 
 pl = []
 
-csvpath = os.path.join("resources", "budget_data.csv")
+csvpath = os.path.join("Resources", "budget_data.csv")
 
 with open(csvpath, newline="") as csvfile:
 
@@ -54,7 +54,7 @@ print("--------------------------------------------------")
 
 print("Total Months: "+str(len(date)))
 
-print(f"Total: " +"$" + {total})
+print("Total: " +"$" + str(total))
 
 print("Average Change: " + "$" + str(round(average,2)))
 
